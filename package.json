@@ -1,7 +1,7 @@
 {
-  "name": "react-scss-template",
+  "name": "password-strength-checker",
   "version": "1.0.0",
-  "description": "This is a react library, bolterplate template",
+  "description": "This is a Password strength checker project built around a custom React Framework",
   "main": "Index.js",
   "proxy": "https://o9etf82346.execute-api.us-east-1.amazonaws.com/",
   "scripts": {

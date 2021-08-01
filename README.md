@@ -4,8 +4,8 @@
 ```
 Project Name: Password Strength Checker
 Date Commence: 2021
-Repository URL: 
-Test URL: 
+Repository URL: https://github.com/MarkCalderon/password-strength-checker
+Test URL: panicky-curve.surge.sh
 ```
 
 
