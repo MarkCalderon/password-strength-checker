@@ -25,9 +25,16 @@ class Home extends React.Component {
 
     // Trigger function for key in changes.
     handleChange(e) {
-        this.setState({
-            inputText: e.target.value
-        });
+        if(e.target.value != '') {
+            this.setState({
+                inputText: e.target.value
+            });
+        }
+        else {
+            this.setState({
+                isLoaded: false,
+            });
+        }
     }
 
     // Trigger function for hide/show the text.
