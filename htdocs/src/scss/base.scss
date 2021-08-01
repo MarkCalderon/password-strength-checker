@@ -1,10 +1,9 @@
-@import './mixins.scss';
-@import './variable.scss';
-
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&display=swap');
+$notosans: 'Noto Sans JP', sans-serif;
 
 html {
     font-family: $notosans;
+    font-size: 62.5%;
 }
 
 h2,h3,h4,h5,h6,p {

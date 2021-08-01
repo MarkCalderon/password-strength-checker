@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "This is a react library, bolterplate template",
   "main": "Index.js",
+  "proxy": "https://o9etf82346.execute-api.us-east-1.amazonaws.com/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:dev": "webpack --progress --env NODE_ENV=local -c ./htdocs/config/webpack.config.dev.js",
