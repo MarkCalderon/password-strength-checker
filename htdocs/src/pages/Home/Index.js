@@ -15,24 +15,29 @@ class Home extends React.Component {
             error: null,
             inputText: '',
             isLoaded: false,
-            isToggleShow: false,
+            showPass: false,
             items: [],
         }
 
         this.handleChange = this.handleChange.bind(this);
-        this.showPass = this.showPass.bind(this);
+        this.visiblePass = this.visiblePass.bind(this);
     }
 
-    // Trigger function for key in changes
+    // Trigger function for key in changes.
     handleChange(e) {
         this.setState({
             inputText: e.target.value
         });
     }
 
-    // Trigger function for hide/shoiw button
-    showPass(e) {
-        console.log(e.target.type)
+    // Trigger function for hide/show the text.
+    visiblePass() {
+        if(this.state.showPass == true) {
+            this.setState({ showPass: false})
+        }
+        else {
+            this.setState({ showPass: true})
+        }
     }
 
     // React Lifecycle, executes when state/objects is updated.
@@ -76,7 +81,7 @@ class Home extends React.Component {
                     <div className="main__inner">
                         <h1 className="main__innerTitleText">Is your password<br /> strong enough?</h1>
                         <div className="main__innerInputCont">
-                            <input className="main__innerInput" type={this.state.isToggleShow ? 'text' : 'password'} onChange={this.handleChange}  />
+                            <input className="main__innerInput" type={(this.state.showPass) ? 'text' : 'password'} placeholder="Type a password" onChange={this.handleChange}  />
                             <div className="main__innerInputHidden" onClick={this.showPass}>HIDE</div>
                         </div>
                         <div className="main__innerBottom">
@@ -93,7 +98,7 @@ class Home extends React.Component {
                     <div className="main__inner">
                         <h1 className="main__innerTitleText">Is your password<br /> strong enough?</h1>
                         <div className="main__innerInputCont">
-                            <input className="main__innerInput" type={this.state.isToggleShow ? 'text' : 'password'} placeholder="Type a password" onChange={this.handleChange}  />
+                            <input className="main__innerInput" type={(this.state.showPass) ? 'text' : 'password'} placeholder="Type a password" onChange={this.handleChange}  />
                             <div className="main__innerInputHidden" onClick={this.showPass}>HIDE</div>
                         </div>
                     </div>
@@ -108,8 +113,8 @@ class Home extends React.Component {
                     <div className="main__inner">
                         <h1 className="main__innerTitleText">Is your password<br /> strong enough?</h1>
                         <div className="main__innerInputCont">
-                            <input className="main__innerInput" type={this.state.isToggleShow ? 'password' : 'text'} onChange={this.handleChange}  />
-                            <div className="main__innerInputHidden" onClick={this.showPass}>HIDE</div>
+                            <input className="main__innerInput" type={(this.state.showPass) ? 'text' : 'password'} placeholder="Type a password" onChange={this.handleChange}  />
+                            <div className="main__innerInputHidden" onClick={this.visiblePass}>HIDE</div>
                         </div>
                         <div className="main__innerBottom">
                             <StrengthLevel level={this.state.items.score} />
