@@ -1,12 +1,23 @@
-# Issues with Webpack dev server
+# Project Details
+---
 
-Adding browserlist to package.json makes reloading or hot reload not work
 ```
-  "browserslist": [
-    "<2%",
-    "ie 11",
-    "not dead"
-  ],
+	Project Name: Password Strength Checker
+	Date Commence: 2021
+	Repository URL: 
+  Test URL: 
 ```
-Solution and Reference for Fix (Webpack 5)
-https://github.com/webpack/webpack-dev-server/issues/2758
+
+
+# How to setup the development environment
+---
+1. Install the necessary dependencies by typing the code below:
+
+```
+npm ci
+```
+
+2. Start the local server and auto compilation of scss/js
+```
+npm run serve
+```
