@@ -2,10 +2,10 @@
 ---
 
 ```
-	Project Name: Password Strength Checker
-	Date Commence: 2021
-	Repository URL: 
-  Test URL: 
+Project Name: Password Strength Checker
+Date Commence: 2021
+Repository URL: 
+Test URL: 
 ```
 
 
