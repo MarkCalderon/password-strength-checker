@@ -25,6 +25,7 @@ class Home extends React.Component {
 
     // Trigger function for key in changes.
     handleChange(e) {
+
         if(e.target.value != '') {
             this.setState({
                 inputText: e.target.value
@@ -39,12 +40,7 @@ class Home extends React.Component {
 
     // Trigger function for hide/show the text.
     visiblePass() {
-        if(this.state.showPass == true) {
-            this.setState({ showPass: false})
-        }
-        else {
-            this.setState({ showPass: true})
-        }
+        (this.state.showPass) ? this.setState({ showPass: false}) : this.setState({ showPass: true})
     }
 
     // React Lifecycle, executes when state/objects is updated.
